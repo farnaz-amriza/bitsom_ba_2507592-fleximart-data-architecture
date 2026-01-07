@@ -1,0 +1,23 @@
+# NoSQL Justification Report – FlexiMart
+
+## Section A: Limitations of RDBMS 
+
+Relational databases such as MySQL work best when data is structured and predictable. In FlexiMart’s case, products are highly diverse. A laptop needs fields like RAM, processor, and storage, while shoes need size, color, and material. In an RDBMS, this usually leads to many unused (NULL) columns or multiple product tables, making the schema complex and hard to maintain.
+
+Frequent changes to the product catalog create another issue. Every new product type may require altering tables or adding new ones. These schema changes are time-consuming, risky in live systems, and slow down business innovation.
+
+Storing customer reviews is also inefficient in a relational model. Reviews must be kept in separate tables and joined with products during queries. As review data grows, these joins become expensive and reduce query performance.
+
+## Section B: NoSQL Benefits 
+
+MongoDB is well suited for FlexiMart’s evolving product catalog because it uses a flexible, document-based schema. Each product is stored as a document, allowing different products to have different attributes without changing the database structure. This makes it easy to add new product types quickly.
+
+MongoDB also supports embedded documents. Customer reviews can be stored directly inside the product document, which makes reading a product and its reviews faster and simpler, with no complex joins required.
+
+In addition, MongoDB is designed for horizontal scalability. As FlexiMart grows, data can be distributed across multiple servers using sharding. This allows the system to handle large volumes of products and user traffic efficiently.
+
+## Section C: Trade-offs 
+
+One drawback of MongoDB is that it offers fewer built-in constraints compared to MySQL. Relational databases enforce strict schemas and foreign keys, while MongoDB relies more on application-level validation.
+
+Another disadvantage is handling complex relationships and transactions. Although MongoDB supports transactions, relational databases are still stronger for scenarios that involve many related tables and strict consistency requirements.
