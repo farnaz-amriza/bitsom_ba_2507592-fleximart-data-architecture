@@ -59,13 +59,15 @@ mysql -u root -p fleximart_dw < part3-datawarehouse/analytics_queries.sql
 mongosh < part2-nosql/mongodb_operations.js
 
 
+## Key Learnings
 
-Key Learnings
-Learned how to design and implement a star schema for a retail sales warehouse. Understood how NoSQL (MongoDB) handles flexible product data with nested documents and dynamic attributes.
-Gained experience with ETL pipelines to extract, transform, and load data into relational and warehouse systems.
-Developed OLAP queries to perform drill-down, top-N analysis, and customer segmentation.
+- Learned how to design and implement a **star schema** for a retail sales warehouse.
+- Understood how **NoSQL (MongoDB)** handles flexible product data with nested documents and dynamic attributes.
+- Gained experience with **ETL pipelines** to extract, transform, and load data into relational and warehouse systems.
+- Developed **OLAP queries** to perform drill-down, top-N analysis, and customer segmentation.
 
-Challenges Faced
-1. Handling different product attributes in MongoDB – Solved by using embedded documents for specifications and reviews.
-2. Ensuring accurate aggregation in OLAP queries – Solved by using LEFT JOINs for full customer coverage and ROLLUP with GROUPING to show year/quarter/month totals.
-3. Loading tables without foreign key violation using Python - Solved by identifying the correct tables with the relevant columns and then joining/merging on common columns to get the desired Foreign Key connection.
+## Challenges Faced
+
+1. **Handling different product attributes in MongoDB** – Solved by using embedded documents for specifications and reviews.
+2. **Ensuring accurate aggregation in OLAP queries** – Solved by using LEFT JOINs for full customer coverage and `ROLLUP` with `GROUPING` to show year/quarter/month totals.
+3. **Loading tables without foreign key violations using Python** – Solved by identifying the correct tables with the relevant columns and joining/merging on common columns to maintain proper FK relationships.
