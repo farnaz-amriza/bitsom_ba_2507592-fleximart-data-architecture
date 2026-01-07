@@ -57,7 +57,9 @@ mysql -u root -p fleximart_dw < part3-datawarehouse/analytics_queries.sql
 ### MongoDB Setup
 
 mongosh < part2-nosql/mongodb_operations.js
-```bash
+
+
+
 ## Key Learnings
 Learned how to design and implement a star schema for a retail sales warehouse. Understood how NoSQL (MongoDB) handles flexible product data with nested documents and dynamic attributes.
 Gained experience with ETL pipelines to extract, transform, and load data into relational and warehouse systems.
