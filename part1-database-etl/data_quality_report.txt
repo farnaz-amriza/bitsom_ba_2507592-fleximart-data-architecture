@@ -1,0 +1,21 @@
+DATA QUALITY REPORT – FLEXIMART ETL
+----------------------------------
+
+Customers:
+- Records read: 25
+- Duplicates removed: 1
+- Rows dropped (missing email): 4
+- Final records loaded: 20
+
+Products:
+- Records read: 20
+- Rows dropped (missing price): 3   
+- Stock filled with 0: 1
+- Final records loaded: 20 
+
+Sales:
+- Records read: 40
+- Duplicate transactions removed: 1
+- Cells with null value: 5
+- Final records loaded: 39
+
